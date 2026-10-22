@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>중1 영어 형성평가 - to부정사의 부사적 용법</title>
+<style>
+:root{--blue:#2457a7;--blue2:#eaf1ff;--ink:#202938;--muted:#64748b;--line:#dbe2ea;--bg:#f4f7fb;--green:#167647;--red:#b42318}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Malgun Gothic","맑은 고딕",sans-serif;line-height:1.6}
+header{background:linear-gradient(120deg,#173f7a,#3976c9);color:white;padding:28px 18px}
+.wrap{max-width:900px;margin:auto}
+h1{font-size:clamp(1.45rem,4vw,2rem);margin:0 0 6px}
+header p{margin:0;opacity:.92}
+main{padding:20px 14px 50px}
+.panel,.question{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;margin:0 0 16px;box-shadow:0 3px 12px #1c355408}
+.student-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+label{font-weight:700;display:block;margin-bottom:5px}
+input[type=text],select{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:11px 12px;font:inherit;background:white;color:#111827}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{background:#ffffff24;border:1px solid #ffffff4d;border-radius:999px;padding:4px 10px;font-size:.9rem}
+.section-title{font-size:1.1rem;margin:24px 0 12px}
+.qhead{display:flex;gap:10px;align-items:flex-start}
+.qnum{flex:0 0 34px;height:34px;border-radius:10px;background:var(--blue2);color:var(--blue);font-weight:800;display:grid;place-items:center}
+.qbody{flex:1;min-width:0}
+.qtitle{font-weight:700;margin:2px 0 9px}
+.sentence{background:#f8fafc;border-radius:9px;padding:12px;margin:8px 0}
+.options{display:grid;gap:8px;margin-top:10px}
+.option{display:flex;align-items:flex-start;gap:9px;border:1px solid var(--line);padding:10px 12px;border-radius:10px;cursor:pointer;background:white}
+.option:hover{border-color:#8ba9df;background:#f8faff}
+.option input{margin-top:5px;accent-color:var(--blue)}
+.answer-input{margin-top:8px}
+.hint{font-size:.9rem;color:var(--muted);margin:6px 0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+button{border:0;border-radius:10px;padding:12px 17px;font:inherit;font-weight:700;cursor:pointer}
+.primary{background:var(--blue);color:white}
+.secondary{background:#e8edf5;color:#253247}
+button:hover{filter:brightness(.96)}
+.result{display:none;background:white;border:2px solid #9bb7e8;border-radius:15px;padding:20px;margin-top:20px}
+.score{font-size:1.5rem;font-weight:800;color:var(--blue)}
+.feedback{padding:12px;border-radius:10px;margin:10px 0;background:#f8fafc}
+.correct{color:var(--green);font-weight:700}
+.incorrect{color:var(--red);font-weight:700}
+.key{font-size:.94rem;color:#334155}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 15px 25px}
+@media(max-width:600px){.student-grid{grid-template-columns:1fr}.panel,.question{padding:15px}.qnum{flex-basis:30px;height:30px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>중1 영어 형성평가</h1>
+<p>To부정사의 부사적 용법 · 목적, 감정의 원인, 판단의 근거, 형용사 수식, 결과</p>
+<div class="meta"><span class="pill">총 15문항</span><span class="pill">각 2점 · 총 30점</span><span class="pill">객관식 · 단어 배열 · 해석 · 문장 완성</span></div>
+</div></header>
+<main class="wrap">
+<section class="panel">
+<h2 style="margin-top:0">학생 정보</h2>
+<div class="student-grid">
+<div><label for="studentName">이름</label><input id="studentName" type="text" placeholder="이름 입력"></div>
+<div><label for="studentClass">반</label><input id="studentClass" type="text" placeholder="반 입력"></div>
+<div><label for="studentNumber">번호</label><input id="studentNumber" type="text" placeholder="번호 입력"></div>
+</div>
+<p class="hint">모든 문항에 답한 뒤 ‘채점하기’를 누르세요. 단어 배열 문항은 영어 문장을 직접 입력합니다.</p>
+</section>
+
+<form id="quizForm">
+<h2 class="section-title">Ⅰ. 객관식 — 알맞은 답 고르기 (1~5번)</h2>
+<div class="question" data-q="1" data-answer="2" data-type="choice">
+<div class="qhead"><div class="qnum">1</div><div class="qbody"><div class="qtitle">다음 문장에서 굵게 표시된 to부정사의 용법은?</div><div class="sentence">I went to the library <b>to study</b> English.</div></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q1" value="1">① 감정의 원인</label>
+<label class="option"><input type="radio" name="q1" value="2">② 목적</label>
+<label class="option"><input type="radio" name="q1" value="3">③ 판단의 근거</label>
+<label class="option"><input type="radio" name="q1" value="4">④ 형용사 수식</label>
+<label class="option"><input type="radio" name="q1" value="5">⑤ 결과</label>
+</div></div>
+
+<div class="question" data-q="2" data-answer="3" data-type="choice">
+<div class="qhead"><div class="qnum">2</div><div class="qbody"><div class="qtitle">다음 중 to부정사가 감정의 원인을 나타내는 문장은?</div></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q2" value="1">① I exercise every day to stay healthy.</label>
+<label class="option"><input type="radio" name="q2" value="2">② This book is easy to read.</label>
+<label class="option"><input type="radio" name="q2" value="3">③ I am happy to see you.</label>
+<label class="option"><input type="radio" name="q2" value="4">④ He grew up to be a doctor.</label>
+<label class="option"><input type="radio" name="q2" value="5">⑤ He must be kind to help the old man.</label>
+</div></div>
+
+<div class="question" data-q="3" data-answer="4" data-type="choice">
+<div class="qhead"><div class="qnum">3</div><div class="qbody"><div class="qtitle">빈칸에 들어갈 말로 가장 알맞은 것은?</div><div class="sentence">This question is difficult ______.</div></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q3" value="1">① answer</label>
+<label class="option"><input type="radio" name="q3" value="2">② answering</label>
+<label class="option"><input type="radio" name="q3" value="3">③ answered</label>
+<label class="option"><input type="radio" name="q3" value="4">④ to answer</label>
+<label class="option"><input type="radio" name="q3" value="5">⑤ answers</label>
+</div></div>
+
+<div class="question" data-q="4" data-answer="4" data-type="choice">
+<div class="qhead"><div class="qnum">4</div><div class="qbody"><div class="qtitle">다음 문장의 의미로 가장 알맞은 것은?</div><div class="sentence">He grew up to be a doctor.</div></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q4" value="1">① 의사가 되기 위해 자랐다.</label>
+<label class="option"><input type="radio" name="q4" value="2">② 의사가 되어서 기뻤다.</label>
+<label class="option"><input type="radio" name="q4" value="3">③ 의사가 되다니 어리석었다.</label>
+<label class="option"><input type="radio" name="q4" value="4">④ 자라서 의사가 되었다.</label>
+<label class="option"><input type="radio" name="q4" value="5">⑤ 의사가 되기에 어려웠다.</label>
+</div></div>
+
+<div class="question" data-q="5" data-answer="4" data-type="choice">
+<div class="qhead"><div class="qnum">5</div><div class="qbody"><div class="qtitle">다음 중 to부정사가 판단의 근거를 나타내는 문장은?</div></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q5" value="1">① She got up early to catch the bus.</label>
+<label class="option"><input type="radio" name="q5" value="2">② He was surprised to find the gift.</label>
+<label class="option"><input type="radio" name="q5" value="3">③ This book is easy to read.</label>
+<label class="option"><input type="radio" name="q5" value="4">④ He must be kind to help the old man.</label>
+<label class="option"><input type="radio" name="q5" value="5">⑤ He lived to be 100 years old.</label>
+</div></div>
+
+<h2 class="section-title">Ⅱ. 단어 배열하기 (6~8번)</h2>
+<div class="question" data-q="6" data-answer="he saved money to buy a new bike" data-type="text">
+<div class="qhead"><div class="qnum">6</div><div class="qbody"><div class="qtitle">주어진 단어를 배열하여 문장을 완성하세요.</div><div class="sentence">그는 새 자전거를 사기 위해 돈을 모았다.<br><span class="key">money / to / a new bike / saved / buy / He</span></div><input class="answer-input" type="text" name="q6" placeholder="영어 문장을 입력하세요"></div></div>
+</div>
+<div class="question" data-q="7" data-answer="she was glad to hear the news" data-type="text">
+<div class="qhead"><div class="qnum">7</div><div class="qbody"><div class="qtitle">주어진 단어를 배열하여 문장을 완성하세요.</div><div class="sentence">그녀는 그 소식을 들어서 기뻤다.<br><span class="key">glad / the news / was / to / hear / She</span></div><input class="answer-input" type="text" name="q7" placeholder="영어 문장을 입력하세요"></div></div>
+</div>
+<div class="question" data-q="8" data-answer="this book is easy to read" data-type="text">
+<div class="qhead"><div class="qnum">8</div><div class="qbody"><div class="qtitle">주어진 단어를 배열하여 문장을 완성하세요.</div><div class="sentence">이 책은 읽기에 쉽다.<br><span class="key">easy / read / is / to / This book</span></div><input class="answer-input" type="text" name="q8" placeholder="영어 문장을 입력하세요"></div></div>
+</div>
+
+<h2 class="section-title">Ⅲ. 용법 분류하기 (9~11번)</h2>
+<p class="hint">보기: ① 목적　② 감정의 원인　③ 판단의 근거　④ 형용사 수식　⑤ 결과</p>
+<div class="question" data-q="9" data-answer="2" data-type="choice">
+<div class="qhead"><div class="qnum">9</div><div class="qbody"><div class="qtitle">She was sad <b>to say goodbye</b>.</div><p>굵게 표시된 to부정사의 용법은?</p></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q9" value="1">① 목적</label><label class="option"><input type="radio" name="q9" value="2">② 감정의 원인</label><label class="option"><input type="radio" name="q9" value="3">③ 판단의 근거</label><label class="option"><input type="radio" name="q9" value="4">④ 형용사 수식</label><label class="option"><input type="radio" name="q9" value="5">⑤ 결과</label>
+</div></div>
+<div class="question" data-q="10" data-answer="3" data-type="choice">
+<div class="qhead"><div class="qnum">10</div><div class="qbody"><div class="qtitle">You were foolish <b>to believe his story</b>.</div><p>굵게 표시된 to부정사의 용법은?</p></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q10" value="1">① 목적</label><label class="option"><input type="radio" name="q10" value="2">② 감정의 원인</label><label class="option"><input type="radio" name="q10" value="3">③ 판단의 근거</label><label class="option"><input type="radio" name="q10" value="4">④ 형용사 수식</label><label class="option"><input type="radio" name="q10" value="5">⑤ 결과</label>
+</div></div>
+<div class="question" data-q="11" data-answer="5" data-type="choice">
+<div class="qhead"><div class="qnum">11</div><div class="qbody"><div class="qtitle">She lived <b>to be 100 years old</b>.</div><p>굵게 표시된 to부정사의 용법은?</p></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q11" value="1">① 목적</label><label class="option"><input type="radio" name="q11" value="2">② 감정의 원인</label><label class="option"><input type="radio" name="q11" value="3">③ 판단의 근거</label><label class="option"><input type="radio" name="q11" value="4">④ 형용사 수식</label><label class="option"><input type="radio" name="q11" value="5">⑤ 결과</label>
+</div></div>
+
+<h2 class="section-title">Ⅳ. 해석 및 의미 이해하기 (12~13번)</h2>
+<div class="question" data-q="12" data-answer="우리는 건강을 유지하기 위해 매일 운동한다" data-type="text">
+<div class="qhead"><div class="qnum">12</div><div class="qbody"><div class="qtitle">다음 문장을 우리말로 해석하세요.</div><div class="sentence">We exercise every day to stay healthy.</div><input class="answer-input" type="text" name="q12" placeholder="우리말 해석을 입력하세요"><p class="hint">핵심 의미: 건강을 유지하기 위해 / 매일 운동한다</p></div></div>
+</div>
+<div class="question" data-q="13" data-answer="2" data-type="choice">
+<div class="qhead"><div class="qnum">13</div><div class="qbody"><div class="qtitle">다음 문장의 의미로 가장 알맞은 것은?</div><div class="sentence">I hurried to the station, only to miss the train.</div></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q13" value="1">① 나는 기차를 타기 위해 역으로 서둘러 갔다.</label>
+<label class="option"><input type="radio" name="q13" value="2">② 나는 역으로 서둘러 갔지만 결국 기차를 놓쳤다.</label>
+<label class="option"><input type="radio" name="q13" value="3">③ 나는 기차를 놓쳐서 슬펐다.</label>
+<label class="option"><input type="radio" name="q13" value="4">④ 나는 역으로 가기에 너무 늦었다.</label>
+<label class="option"><input type="radio" name="q13" value="5">⑤ 나는 기차를 놓치다니 어리석었다.</label>
+</div></div>
+
+<h2 class="section-title">Ⅴ. 오류 찾기 및 문장 완성하기 (14~15번)</h2>
+<div class="question" data-q="14" data-answer="4" data-type="choice">
+<div class="qhead"><div class="qnum">14</div><div class="qbody"><div class="qtitle">다음 중 문법적으로 옳은 문장을 고르세요.</div></div></div>
+<div class="options">
+<label class="option"><input type="radio" name="q14" value="1">① This book is easy read.</label>
+<label class="option"><input type="radio" name="q14" value="2">② She was happy see you.</label>
+<label class="option"><input type="radio" name="q14" value="3">③ He grew up be a doctor.</label>
+<label class="option"><input type="radio" name="q14" value="4">④ I went to the library to study English.</label>
+<label class="option"><input type="radio" name="q14" value="5">⑤ This question is difficult answer.</label>
+</div></div>
+<div class="question" data-q="15" data-answer="to save" data-type="text">
+<div class="qhead"><div class="qnum">15</div><div class="qbody"><div class="qtitle">우리말과 일치하도록 빈칸에 알맞은 말을 쓰세요.</div><div class="sentence">그는 그 개를 구하다니 용감했다.<br>He was brave ______ the dog.</div><input class="answer-input" type="text" name="q15" placeholder="빈칸에 들어갈 영어 표현"></div></div>
+</div>
+
+<div class="actions">
+<button type="button" class="primary" id="gradeBtn">채점하기</button>
+<button type="button" class="secondary" id="resetBtn">다시 풀기</button>
+<button type="button" class="secondary" id="printBtn">인쇄하기</button>
+</div>
+</form>
+
+<section class="result" id="result" aria-live="polite">
+<h2 style="margin-top:0">채점 결과</h2>
+<div id="studentSummary"></div>
+<div class="score" id="scoreText"></div>
+<p id="scoreMessage"></p>
+<div id="details"></div>
+<div class="actions"><button type="button" class="primary" id="showAnswersBtn">정답 및 해설 보기</button></div>
+<div id="answerKey" style="display:none"></div>
+</section>
+</main>
+<footer>수업용 형성평가 웹앱 · 결과는 현재 브라우저 화면에서만 확인할 수 있으며 자동 저장되거나 교사에게 전송되지 않습니다.</footer>
+<script>
+const explanations = {
+1:"② 목적 — 영어를 공부하기 위해 도서관에 갔습니다.",
+2:"③ 감정의 원인 — 너를 만나서 기쁩니다.",
+3:"④ to answer — difficult 뒤에서 ‘답하기 어려운’이라는 의미를 완성합니다.",
+4:"④ 자라서 의사가 되었다 — 성장한 뒤의 결과를 나타냅니다.",
+5:"④ 판단의 근거 — 노인을 돕는 행동을 근거로 친절하다고 판단합니다.",
+6:"He saved money to buy a new bike. — 새 자전거를 사기 위해 돈을 모았습니다.",
+7:"She was glad to hear the news. — 그 소식을 들어서 기뻤습니다.",
+8:"This book is easy to read. — 이 책은 읽기에 쉽습니다.",
+9:"② 감정의 원인 — 작별 인사를 하게 되어 슬펐습니다.",
+10:"③ 판단의 근거 — 그의 이야기를 믿은 행동을 어리석다고 판단합니다.",
+11:"⑤ 결과 — 100세까지 살았습니다.",
+12:"우리는 건강을 유지하기 위해 매일 운동한다. — to stay healthy는 목적을 나타냅니다.",
+13:"② — 서둘러 역에 갔지만 결국 기차를 놓쳤다는 결과입니다.",
+14:"④ — 목적을 나타내는 to study가 올바르게 사용되었습니다.",
+15:"to save — 개를 구한 행동을 근거로 용감하다고 판단합니다."
+};
+function norm(s){return (s||"").toLowerCase().replace(/[.,!?']/g,"").replace(/\s+/g," ").trim();}
+function isCorrect(q, value){
+ const ans=q.dataset.answer;
+ if(q.dataset.type==="choice") return value===ans;
+ const v=norm(value);
+ if(q.dataset.q==="12"){
+   return (v.includes("건강") && v.includes("유지") && v.includes("매일") && v.includes("운동") && (v.includes("위해")||v.includes("려고")));
+ }
+ return v===norm(ans);
+}
+document.getElementById("gradeBtn").addEventListener("click",()=>{
+ let correct=0, unanswered=0, details="";
+ const questions=[...document.querySelectorAll(".question[data-q]")];
+ questions.forEach(q=>{
+   const n=q.dataset.q;
+   let value="";
+   if(q.dataset.type==="choice"){
+     const picked=q.querySelector('input[type="radio"]:checked');
+     value=picked?picked.value:"";
+   }else{
+     const input=q.querySelector('input[type="text"]');
+     value=input?input.value:"";
+   }
+   if(!value.trim()) unanswered++;
+   const ok=isCorrect(q,value);
+   if(ok) correct++;
+   details+=`<div class="feedback"><strong>${n}번</strong> — ${ok?'<span class="correct">정답</span>':'<span class="incorrect">'+(value.trim()?'오답':'미응답')+'</span>'}<div class="key">${explanations[n]}</div></div>`;
+ });
+ const score=correct*2;
+ const name=document.getElementById("studentName").value.trim();
+ const cls=document.getElementById("studentClass").value.trim();
+ const num=document.getElementById("studentNumber").value.trim();
+ document.getElementById("studentSummary").textContent=[name,cls?cls+"반":"",num?num+"번":""].filter(Boolean).join(" · ")||"학생 정보 미입력";
+ document.getElementById("scoreText").textContent=`${score}점 / 30점 (${correct} / 15문항 정답)`;
+ document.getElementById("scoreMessage").textContent=unanswered?`미응답 문항: ${unanswered}개입니다. 해설을 확인하고 다시 풀어 보세요.`:(score===30?"모든 문제를 맞혔습니다! 훌륭해요.":"틀린 문항의 해설을 확인하고 다시 도전해 보세요.");
+ document.getElementById("details").innerHTML=details;
+ document.getElementById("answerKey").style.display="none";
+ document.getElementById("showAnswersBtn").textContent="정답 및 해설 보기";
+ document.getElementById("result").style.display="block";
+ document.getElementById("result").scrollIntoView({behavior:"smooth",block:"start"});
+});
+document.getElementById("showAnswersBtn").addEventListener("click",()=>{
+ const key=document.getElementById("answerKey");
+ const show=key.style.display==="none";
+ key.style.display=show?"block":"none";
+ document.getElementById("showAnswersBtn").textContent=show?"정답 및 해설 숨기기":"정답 및 해설 보기";
+ if(show) key.innerHTML="<h3>정답 및 해설</h3>"+Object.keys(explanations).map(n=>`<p><strong>${n}번.</strong> ${explanations[n]}</p>`).join("");
+});
+document.getElementById("resetBtn").addEventListener("click",()=>{
+ if(confirm("입력한 답을 모두 지우고 처음부터 다시 풀까요?")){
+  document.getElementById("quizForm").reset();
+  document.getElementById("result").style.display="none";
+  document.querySelectorAll(".question").forEach(q=>q.style.borderColor="");
+  window.scrollTo({top:0,behavior:"smooth"});
+ }
+});
+document.getElementById("printBtn").addEventListener("click",()=>window.print());
+</script>
+</body>
+</html>
